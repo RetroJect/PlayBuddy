@@ -1,5 +1,7 @@
 # Playbuddy
 
+[![Build Status](https://travis-ci.org/ChicoState/PlayBuddy.svg?branch=development)](https://travis-ci.org/ChicoState/PlayBuddy)
+
 A web application for finding on-going, or soon-to-start group
 activities in your local area.
 
@@ -12,7 +14,7 @@ activities in your local area.
 
 This repository holds everything needed to get the application up and running.
 PlayBuddy is split between the [React Frontend](./frontend/) and the [API](./backend/).
-In each are corrosponding instructions to get the half working.
+In each are corresponding instructions to get the half working.
 PlayBuddy is designed to be run from containers so there's provided Dockerfiles
 to make setup as easy as possible.
 
@@ -26,7 +28,7 @@ At the top is a link to see how our most recent build is doing.
 Want to make PlayBuddy better?
 Fantastic, so do we!
 As an open source project we're always happy to have others contribute,
-but we do ask that you follow a few guidlines when doing so.
+but we do ask that you follow a few guidelines when doing so.
 
 1. Make a fork
 
@@ -43,7 +45,7 @@ but we do ask that you follow a few guidlines when doing so.
 3. Make some changes
 
    Now's the fun part, it's time to make the changes to PlayBuddy!
-   Each part of the projct uses an Eslint configuration for code styling
+   Each part of the project uses an Eslint configuration for code styling
    so please make sure to follow that when writing.
 
    Please refer to each part on how to use the configuration for that environment.
