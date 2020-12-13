@@ -19,8 +19,9 @@ jobs:
         - npm install
         - npm run lint
     - stage: test
-      script:
+      before_script:
         - cd ./backend
         - npm install
         - sudo docker run -p 27017:27017 -d mongo
+      script:
         - npm run test
