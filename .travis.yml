@@ -7,21 +7,10 @@ services:
 node_js:
   - "lts/*"
 
-stage:
-  - lint
-  - test
+before_script:
+  - cd ./backend
+  - sudo docker run -p 27017:27017 -d mongo
+  - npm install
 
-jobs:
-  include:
-    - stage: lint
-      script:
-        - cd ./backend
-        - npm install
-        - npm run lint
-    - stage: test
-      before_script:
-        - cd ./backend
-        - npm install
-        - sudo docker run -p 27017:27017 -d mongo
-      script:
-        - npm run test
+script:
+  - npm test
