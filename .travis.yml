@@ -21,6 +21,6 @@ jobs:
     - stage: test
       script:
         - cd ./backend
-        - sudo docker run -p 27017:27017 -d mongo
         - npm install
+        - sudo docker run -p 27017:27017 -d mongo
         - npm run test
