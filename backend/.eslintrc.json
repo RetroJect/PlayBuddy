@@ -11,8 +11,12 @@
         "ecmaVersion": 12,
         "sourceType": "module"
     },
-    "plugins": ["jest"],
+    "plugins": [
+        "jest",
+        "lcom"
+    ],
     "rules": {
-        "no-console": "off"
+        "no-console": "off",
+        "lcom/lcom4": "warn"
     }
 }
