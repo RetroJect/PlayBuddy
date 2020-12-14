@@ -1,5 +1,8 @@
 # Node Packages
 node_modules
 
+# Jest Coverage
+coverage
+
 # Environment Files
 .env
