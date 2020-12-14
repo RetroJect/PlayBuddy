@@ -7,14 +7,14 @@ import CreateActivity from './pages/CreateActivity';
 const Main = () => (
   <Switch>
     <Route exact path="/">
-      <Home/>
+      <Home />
     </Route>
-    <Route 
+    <Route
       path="/activity/:id"
-      children={({match}) => (<ActivityPage id={match.params.id}/>)}
+      children={({ match }) => (<ActivityPage id={match.params.id} />)}
     />
     <Route path="/create">
-      <CreateActivity/>
+      <CreateActivity />
     </Route>
   </Switch>
 );

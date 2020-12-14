@@ -7,6 +7,7 @@ import { ConnectedRouter } from 'connected-react-router';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import configureStore, { history } from './reducers/configureStore';
+
 dotenv.config();
 
 const store = configureStore({});
