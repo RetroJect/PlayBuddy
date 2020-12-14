@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 const request = require('supertest');
 const mongoose = require('mongoose');
+const server = require('../index');
 
 const agent = request.agent('localhost:3001');
 const database = require('../database');
@@ -29,7 +30,7 @@ afterAll(async () => {
 // Wait for the server to startup
 beforeAll((done) => {
   setTimeout(done, 5000);
-});
+})
 
 describe('Sessions', () => {
   it('Nonexistent route', (done) => {
@@ -215,7 +216,7 @@ describe('Sessions', () => {
       });
   });
   it('Edit nonexistent activity', (done) => {
-    agent.post('/api/activity/edit/aaaaaaaaaaaaaaaaaaaaaaaa')
+    agent.post('/api/activity/edit/' + 'aaaaaaaaaaaaaaaaaaaaaaaa')
       .send({ title: 'newtitle', description: 'newdescription' })
       .end((err, res) => {
         expect(res.status).toEqual(404);
@@ -223,7 +224,7 @@ describe('Sessions', () => {
       });
   });
   it('Delete nonexistent activity', (done) => {
-    agent.post('/api/activity/delete/aaaaaaaaaaaaaaaaaaaaaaaa')
+    agent.post('/api/activity/delete/' + 'aaaaaaaaaaaaaaaaaaaaaaaa')
       .send({ title: 'newtitle', description: 'newdescription' })
       .end((err, res) => {
         expect(res.status).toEqual(404);
@@ -231,7 +232,7 @@ describe('Sessions', () => {
       });
   });
   it('Restore nonexistent activity', (done) => {
-    agent.post('/api/activity/restore/aaaaaaaaaaaaaaaaaaaaaaaa')
+    agent.post('/api/activity/restore/' + 'aaaaaaaaaaaaaaaaaaaaaaaa')
       .send({ title: 'newtitle', description: 'newdescription' })
       .end((err, res) => {
         expect(res.status).toEqual(404);
