@@ -11,6 +11,7 @@ const Main = () => (
     </Route>
     <Route
       path="/activity/:id"
+      // eslint-disable-next-line react/no-children-prop
       children={({ match }) => (<ActivityPage id={match.params.id} />)}
     />
     <Route path="/create">
